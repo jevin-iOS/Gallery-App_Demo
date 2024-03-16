@@ -107,16 +107,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4Uo-zp-o1b" firstAttribute="top" secondItem="9Kx-cg-MBv" secondAttribute="bottom" constant="5" id="2JH-dm-jI9"/>
+                            <constraint firstItem="dVq-sp-lLj" firstAttribute="top" secondItem="9Kx-cg-MBv" secondAttribute="bottom" constant="5" id="2lb-C6-5br"/>
                             <constraint firstAttribute="bottom" secondItem="4Uo-zp-o1b" secondAttribute="bottom" id="426-Li-42U"/>
                             <constraint firstItem="dVq-sp-lLj" firstAttribute="bottom" secondItem="4Uo-zp-o1b" secondAttribute="bottom" id="4TU-8b-Kum"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dVq-sp-lLj" secondAttribute="trailing" constant="5" id="CaV-yK-7mm"/>
                             <constraint firstItem="9Kx-cg-MBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="IUG-JI-2Kw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Kx-cg-MBv" secondAttribute="trailing" constant="5" id="Qck-8p-Af2"/>
-                            <constraint firstItem="dVq-sp-lLj" firstAttribute="top" secondItem="4Uo-zp-o1b" secondAttribute="top" id="VhI-iR-1NA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Uo-zp-o1b" secondAttribute="trailing" constant="5" id="Zfa-AF-JNL"/>
                             <constraint firstItem="9Kx-cg-MBv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:17" id="ZsD-Dx-k47"/>
                             <constraint firstItem="9Kx-cg-MBv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="emq-ga-JaV"/>
-                            <constraint firstItem="4Uo-zp-o1b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="mxg-CL-Qia"/>
                             <constraint firstItem="dVq-sp-lLj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="nvh-8W-CQO"/>
                             <constraint firstItem="4Uo-zp-o1b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="zt1-Cj-Z0z"/>
                         </constraints>
