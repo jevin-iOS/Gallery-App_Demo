@@ -14,6 +14,7 @@ class PhotosVC: UIViewController {
     @IBOutlet weak var btnRemove: UIButton!
     @IBOutlet weak var photosTable: UITableView!
     @IBOutlet weak var photosCollection: UICollectionView!
+    @IBOutlet weak var lblSelectCount: UILabel!
     
     var isSelectionOn: Bool = false
     var isGridOn: Bool = false
@@ -58,6 +59,10 @@ class PhotosVC: UIViewController {
         btnRemove.isHidden = !(selectedPhotosIds.count > 0)
     }
     
+    func refreshCount() {
+        lblSelectCount.text = selectedPhotosIds.count > 0 ? "(\(selectedPhotosIds.count))" : ""
+    }
+    
     func addDataListener() {
         
         // Bing Error Message
@@ -88,6 +93,7 @@ class PhotosVC: UIViewController {
                 }
                 photosTable.reloadRows(at: [indexPath], with: .automatic)
                 isNeedToGiveDeleteOption()
+                refreshCount()
             } else {
                 guard let previewVC = self.getViewController(type: PreviewVC.self) else { return }
                 previewVC.currentIndex = indexPath.row
@@ -106,6 +112,7 @@ class PhotosVC: UIViewController {
                     selectedPhotosIds.removeAll { $0 == photosDetails?.id ?? "" }
                 }
                 photosCollection.reloadItems(at: [indexPath])
+                refreshCount()
                 isNeedToGiveDeleteOption()
             } else {
                 guard let previewVC = self.getViewController(type: PreviewVC.self) else { return }
@@ -171,6 +178,7 @@ class PhotosVC: UIViewController {
             photosViewModel.removePhotosDetails(ids: selectedPhotosIds)
             selectedPhotosIds.removeAll()
             isNeedToGiveDeleteOption()
+            refreshCount()
             btnSelectUnSelectTapped(UIButton())
         }))
         
@@ -182,7 +190,7 @@ class PhotosVC: UIViewController {
     
     @IBAction func btnSelectUnSelectTapped(_ sender: UIButton) {
         isSelectionOn = !isSelectionOn
-        let btnTitle = isSelectionOn ? "UnSelect" : "Select"
+        let btnTitle = isSelectionOn ? "Cancel" : "Select"
         btnSelectUnSelect.setTitle(btnTitle, for: .normal)
         if !isSelectionOn {
             var indexPaths: [IndexPath] = []
@@ -202,6 +210,7 @@ class PhotosVC: UIViewController {
                 photosTable.reloadRows(at: indexPaths, with: .automatic)
             }
             isNeedToGiveDeleteOption()
+            refreshCount()
         }
     }
     

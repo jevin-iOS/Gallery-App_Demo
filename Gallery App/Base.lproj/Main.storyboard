@@ -18,26 +18,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJu-Wj-Beb">
-                                <rect key="frame" x="5" y="59" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="LSM-zP-Tpt"/>
-                                    <constraint firstAttribute="height" constant="50" id="orf-Nk-Ig5"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="GridImg"/>
-                                <connections>
-                                    <action selector="btnGridListTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nv-ne-qma"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc1-bo-CED">
-                                <rect key="frame" x="159" y="59" width="75" height="50"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="deleteImg"/>
-                                <connections>
-                                    <action selector="btnRemoveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7t3-6o-bbr"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Kx-cg-MBv">
+                                <rect key="frame" x="5" y="59" width="383" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJu-Wj-Beb">
+                                        <rect key="frame" x="0.0" y="3" width="124.33333333333333" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="GridImg"/>
+                                        <connections>
+                                            <action selector="btnGridListTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nv-ne-qma"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vB-1M-aVV">
+                                        <rect key="frame" x="129.33333333333334" y="0.0" width="124.33333333333334" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vym-yh-Y3f">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="deleteImg"/>
+                                                <connections>
+                                                    <action selector="btnRemoveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJq-ww-bif"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tX-6Y-R6e">
+                                                <rect key="frame" x="49.999999999999993" y="0.0" width="74.333333333333314" height="50"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="vym-yh-Y3f" firstAttribute="leading" secondItem="5vB-1M-aVV" secondAttribute="leading" id="TTz-60-aYx"/>
+                                            <constraint firstItem="vym-yh-Y3f" firstAttribute="top" secondItem="5vB-1M-aVV" secondAttribute="top" id="agr-dT-5uL"/>
+                                            <constraint firstItem="2tX-6Y-R6e" firstAttribute="leading" secondItem="vym-yh-Y3f" secondAttribute="trailing" id="dyV-pb-VG7"/>
+                                            <constraint firstItem="2tX-6Y-R6e" firstAttribute="top" secondItem="5vB-1M-aVV" secondAttribute="top" id="gIE-MK-Chh"/>
+                                            <constraint firstItem="vym-yh-Y3f" firstAttribute="width" secondItem="5vB-1M-aVV" secondAttribute="height" multiplier="1:1" id="hzL-Uu-QZC"/>
+                                            <constraint firstAttribute="bottom" secondItem="vym-yh-Y3f" secondAttribute="bottom" id="i8e-IP-w10"/>
+                                            <constraint firstAttribute="bottom" secondItem="2tX-6Y-R6e" secondAttribute="bottom" id="kzc-1v-SwI"/>
+                                            <constraint firstAttribute="trailing" secondItem="2tX-6Y-R6e" secondAttribute="trailing" id="x09-HI-mnr"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJV-kf-ChP">
+                                        <rect key="frame" x="258.66666666666669" y="8" width="124.33333333333331" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Select"/>
+                                        <connections>
+                                            <action selector="btnSelectUnSelectTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WXx-Jm-LPA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Uo-zp-o1b">
                                 <rect key="frame" x="5" y="114" width="383" height="738"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,46 +103,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJV-kf-ChP">
-                                <rect key="frame" x="294.33333333333331" y="66.666666666666671" width="93.666666666666686" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="93.670000000000002" id="OEY-9z-uLK"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Select"/>
-                                <connections>
-                                    <action selector="btnSelectUnSelectTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WXx-Jm-LPA"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZJV-kf-ChP" firstAttribute="centerY" secondItem="vc1-bo-CED" secondAttribute="centerY" id="1Mn-Qe-ZBF"/>
-                            <constraint firstItem="vc1-bo-CED" firstAttribute="bottom" secondItem="nJu-Wj-Beb" secondAttribute="bottom" id="3kI-NY-8rO"/>
                             <constraint firstAttribute="bottom" secondItem="4Uo-zp-o1b" secondAttribute="bottom" id="426-Li-42U"/>
                             <constraint firstItem="dVq-sp-lLj" firstAttribute="bottom" secondItem="4Uo-zp-o1b" secondAttribute="bottom" id="4TU-8b-Kum"/>
-                            <constraint firstItem="ZJV-kf-ChP" firstAttribute="height" secondItem="nJu-Wj-Beb" secondAttribute="height" multiplier="0.7" id="91C-xZ-St6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dVq-sp-lLj" secondAttribute="trailing" constant="5" id="CaV-yK-7mm"/>
-                            <constraint firstItem="vc1-bo-CED" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hio-lM-GfZ"/>
-                            <constraint firstItem="nJu-Wj-Beb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="KZN-Ns-pSb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZJV-kf-ChP" secondAttribute="trailing" constant="5" id="O6R-92-Uu6"/>
-                            <constraint firstItem="nJu-Wj-Beb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OFG-IN-Mvz"/>
+                            <constraint firstItem="9Kx-cg-MBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="IUG-JI-2Kw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Kx-cg-MBv" secondAttribute="trailing" constant="5" id="Qck-8p-Af2"/>
                             <constraint firstItem="dVq-sp-lLj" firstAttribute="top" secondItem="4Uo-zp-o1b" secondAttribute="top" id="VhI-iR-1NA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Uo-zp-o1b" secondAttribute="trailing" constant="5" id="Zfa-AF-JNL"/>
+                            <constraint firstItem="9Kx-cg-MBv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:17" id="ZsD-Dx-k47"/>
+                            <constraint firstItem="9Kx-cg-MBv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="emq-ga-JaV"/>
                             <constraint firstItem="4Uo-zp-o1b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="mxg-CL-Qia"/>
-                            <constraint firstItem="vc1-bo-CED" firstAttribute="width" secondItem="nJu-Wj-Beb" secondAttribute="width" multiplier="1.5" id="nfZ-N9-q3Z"/>
                             <constraint firstItem="dVq-sp-lLj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="nvh-8W-CQO"/>
-                            <constraint firstItem="vc1-bo-CED" firstAttribute="top" secondItem="nJu-Wj-Beb" secondAttribute="top" id="xac-PZ-BlC"/>
-                            <constraint firstItem="vc1-bo-CED" firstAttribute="height" secondItem="nJu-Wj-Beb" secondAttribute="height" id="z3A-NV-W67"/>
                             <constraint firstItem="4Uo-zp-o1b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="zt1-Cj-Z0z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jwt-Um-Tuu"/>
                     <connections>
                         <outlet property="btnGridList" destination="nJu-Wj-Beb" id="F5u-hL-06i"/>
-                        <outlet property="btnRemove" destination="vc1-bo-CED" id="uw9-XT-BDb"/>
+                        <outlet property="btnRemove" destination="vym-yh-Y3f" id="mAC-YG-I4B"/>
                         <outlet property="btnSelectUnSelect" destination="ZJV-kf-ChP" id="09E-Mf-m8h"/>
+                        <outlet property="lblSelectCount" destination="2tX-6Y-R6e" id="zU1-Ho-Zse"/>
                         <outlet property="photosCollection" destination="dVq-sp-lLj" id="us2-Tp-hVd"/>
                         <outlet property="photosTable" destination="4Uo-zp-o1b" id="O6B-og-g0l"/>
                     </connections>
