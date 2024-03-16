@@ -14,8 +14,199 @@
             filePath = "Gallery App/View/PhotosVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "addDataListener()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EB9DA33F-9429-42A8-A21C-FF4944D3B444 - 7d15041938c297"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Optional&lt;Gallery_App.PhotosDetails&gt;) -&gt; () in Gallery_App.PhotosVC.addDataListener() -&gt; ()"
+                  moduleName = "Gallery App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Untitled/Gallery-App/Gallery%20App/View/PhotosVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "EB9DA33F-9429-42A8-A21C-FF4944D3B444 - 9186277e83eee086"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Optional&lt;Gallery_App.PhotosDetails&gt;, Foundation.IndexPath) -&gt; () in Gallery_App.PhotosVC.addDataListener() -&gt; ()"
+                  moduleName = "Gallery App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Untitled/Gallery-App/Gallery%20App/View/PhotosVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "592">
+               </Location>
+               <Location
+                  uuid = "EB9DA33F-9429-42A8-A21C-FF4944D3B444 - 9186277e83eee754"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Optional&lt;Gallery_App.PhotosDetails&gt;, Foundation.IndexPath) -&gt; () in Gallery_App.PhotosVC.addDataListener() -&gt; ()"
+                  moduleName = "Gallery App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Untitled/Gallery-App/Gallery%20App/View/PhotosVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1460">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8CD47243-ED20-4B57-93D9-8F5499E67E46"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gallery App/View/PhotosTable/Gird View/GridViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "downloadData(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2168DE4F-B786-42CE-B172-355D9508891B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gallery App/View/PhotosTable/Gird View/PhotosCollectionDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2168DE4F-B786-42CE-B172-355D9508891B - 891f43c6a6c382be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gallery_App.PhotosCollectionDelegate.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
+                  moduleName = "Gallery App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Untitled/Gallery-App/Gallery%20App/View/PhotosTable/Gird%20View/PhotosCollectionDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "600">
+               </Location>
+               <Location
+                  uuid = "2168DE4F-B786-42CE-B172-355D9508891B - 891f43c6a6c382be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gallery_App.PhotosCollectionDelegate.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
+                  moduleName = "Gallery App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Untitled/Gallery-App/Gallery%20App/View/PhotosTable/Gird%20View/PhotosCollectionDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "508">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3A388B9-D3A6-47ED-8D8E-629F093B0014"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gallery App/View/PhotosTable/Gird View/PhotosCollectionDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F6566FFC-BBC5-4E89-82C9-5BCC9CC3EBA4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gallery App/View/PhotosVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "addDataListener()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F6566FFC-BBC5-4E89-82C9-5BCC9CC3EBA4 - 5dc48645e68b5380"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (Swift.Optional&lt;Gallery_App.PhotosDetails&gt;, Foundation.IndexPath) -&gt; () in Gallery_App.PhotosVC.addDataListener() -&gt; ()"
+                  moduleName = "Gallery App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Untitled/Gallery-App/Gallery%20App/View/PhotosVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "F6566FFC-BBC5-4E89-82C9-5BCC9CC3EBA4 - 5dc48645e68b5380"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (Swift.Optional&lt;Gallery_App.PhotosDetails&gt;, Foundation.IndexPath) -&gt; () in Gallery_App.PhotosVC.addDataListener() -&gt; ()"
+                  moduleName = "Gallery App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Untitled/Gallery-App/Gallery%20App/View/PhotosVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "212">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DA43AD9-4B54-401A-A815-B34ED959A175"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gallery App/View/PhotosVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "addDataListener()"
             landmarkType = "7">
          </BreakpointContent>

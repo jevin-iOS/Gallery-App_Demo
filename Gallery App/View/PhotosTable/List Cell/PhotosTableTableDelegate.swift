@@ -10,7 +10,7 @@ import UIKit
 
 class PhotosTableTableDelegate<T>: NSObject, UITableViewDelegate {
     
-    var didSelectedRow: ((T?)->()) = {_ in}
+    var didSelectedRow: ((T?, IndexPath)->()) = {_,_  in}
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.frame.height - 90
@@ -19,9 +19,8 @@ class PhotosTableTableDelegate<T>: NSObject, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let tableCell = tableView.cellForRow(at: indexPath) as? ListViewCell {
-            didSelectedRow(tableCell.photosDetails as? T)
+            didSelectedRow(tableCell.photosDetails as? T, indexPath)
         }
        
     }
-    
 }
