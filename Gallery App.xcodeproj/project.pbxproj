@@ -100,7 +100,6 @@
 				FC9FB2C72BA5604F00505491 /* SceneDelegate.swift */,
 				FC9FB2DC2BA561F700505491 /* Extension */,
 				FC9FB2DD2BA5620500505491 /* Common */,
-				FC9FB2DE2BA5621200505491 /* Validation */,
 				FC9FB2DF2BA5621B00505491 /* Services */,
 				FC9FB2E02BA5622600505491 /* Model */,
 				FC9FB2E12BA5623700505491 /* Resource */,
@@ -131,13 +130,6 @@
 				FC9FB2F02BA56B0C00505491 /* Constant.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		FC9FB2DE2BA5621200505491 /* Validation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Validation;
 			sourceTree = "<group>";
 		};
 		FC9FB2DF2BA5621B00505491 /* Services */ = {

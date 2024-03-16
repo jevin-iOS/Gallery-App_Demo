@@ -10,7 +10,7 @@ import UIKit
 
 class ImageVC: UIViewController {
     
-    var titleLabel: UILabel?
+    var imageView: UIImageView?
     
     var photosDetails: PhotosDetails
     
@@ -26,10 +26,20 @@ class ImageVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        titleLabel?.center = CGPoint(x: 160, y: 250)
-        titleLabel?.textAlignment = NSTextAlignment.center
-        titleLabel?.text = photosDetails.altDescription 
-        self.view.addSubview(titleLabel!)
+        imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: self.view.frame.width - 40.0, height: self.view.frame.height - 40.0))
+        imageView?.contentMode = .scaleAspectFit
+        self.view.addSubview(imageView!)
+        self.downloadData(url: photosDetails.urls.regular, name: photosDetails.id)
+    }
+    
+    func downloadData(url: String, name: String) {
+        
+        DispatchQueue.global(qos: .background).async {
+            ImageDownloader.downloadImage(from: url) { image in
+                DispatchQueue.main.async { [self] in
+                    imageView?.image = image
+                }
+            }
+        }
     }
 }

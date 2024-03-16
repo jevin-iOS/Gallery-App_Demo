@@ -15,14 +15,12 @@ struct PhotosDetails: Codable {
     let altDescription: String
     let urls: Urls
     let likes: Int
-    let assetType: String
 
     enum CodingKeys: String, CodingKey {
         case id
         case createdAt = "created_at"
         case altDescription = "alt_description"
         case urls, likes
-        case assetType = "asset_type"
     }
 }
 

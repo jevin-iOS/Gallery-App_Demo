@@ -22,8 +22,8 @@ class GridViewCell: UICollectionViewCell {
             lblLikes.text = "\(photosDetails?.likes ?? 0)"
             lblDates.text = photosDetails?.createdAt ?? ""
             
-            if let urlStr = photosDetails?.urls.regular {
-                downloadData(url: urlStr)
+            if let urlStr = photosDetails?.urls.regular, let id = photosDetails?.id {
+                downloadData(url: urlStr, name: id)
             }
             print("")
         }
@@ -35,7 +35,7 @@ class GridViewCell: UICollectionViewCell {
         }
     }
     
-    func downloadData(url: String) {
+    func downloadData(url: String, name: String) {
         
         DispatchQueue.global(qos: .background).async {
             ImageDownloader.downloadImage(from: url) { image in

@@ -64,6 +64,21 @@
                   endingLineNumber = "81"
                   offsetFromSymbolStart = "1460">
                </Location>
+               <Location
+                  uuid = "EB9DA33F-9429-42A8-A21C-FF4944D3B444 - e95a11d355890aef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Optional&lt;Gallery_App.PhotosDetails&gt;, Foundation.IndexPath) -&gt; () in Gallery_App.PhotosVC.addDataListener() -&gt; ()"
+                  moduleName = "Gallery App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Gallery-App_Demo/Gallery%20App/View/PhotosVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1460">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -79,7 +94,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
             endingLineNumber = "43"
-            landmarkName = "downloadData(url:)"
+            landmarkName = "downloadData(url:name:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -122,6 +137,21 @@
                   moduleName = "Gallery App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Untitled/Gallery-App/Gallery%20App/View/PhotosTable/Gird%20View/PhotosCollectionDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  uuid = "2168DE4F-B786-42CE-B172-355D9508891B - 2e3f522a61e423a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gallery_App.PhotosCollectionDelegate.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
+                  moduleName = "Gallery App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Gallery-App_Demo/Gallery%20App/View/PhotosTable/Gird%20View/PhotosCollectionDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -186,6 +216,21 @@
                   moduleName = "Gallery App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Untitled/Gallery-App/Gallery%20App/View/PhotosVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "F6566FFC-BBC5-4E89-82C9-5BCC9CC3EBA4 - 2518b0e830ecbfc9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (Swift.Optional&lt;Gallery_App.PhotosDetails&gt;, Foundation.IndexPath) -&gt; () in Gallery_App.PhotosVC.addDataListener() -&gt; ()"
+                  moduleName = "Gallery App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Gallery-App_Demo/Gallery%20App/View/PhotosVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
