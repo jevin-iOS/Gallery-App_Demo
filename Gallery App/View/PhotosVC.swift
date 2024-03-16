@@ -29,6 +29,8 @@ class PhotosVC: UIViewController {
     private var photosCollectionDataSource: PhotosCollectionDataSource<GridViewCell, PhotosDetails>?
     private var photosCollectionDelegate = PhotosCollectionDelegate<PhotosDetails>()
     
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,19 +42,20 @@ class PhotosVC: UIViewController {
         photosCollection.register(UINib(nibName: "GridViewCell", bundle: nil), forCellWithReuseIdentifier: "GridViewCell")
         photosCollection.delegate = photosCollectionDelegate
         
-        self.addIndicatorEvent()
         self.fetchPhotosList()
         self.addDataListener()
+        self.bindDelegates()
     }
-
-    func addIndicatorEvent() {
-        photosViewModel.indicatorActivity.bind { [weak self] isActive in
-            
-        }
-    }
+    
+    
+    // MARK: - Other Methods
     
     func fetchPhotosList() {
         photosViewModel.fetchPhotosList()
+    }
+    
+    func isNeedToGiveDeleteOption() {
+        btnRemove.isHidden = !(selectedPhotosIds.count > 0)
     }
     
     func addDataListener() {
@@ -62,12 +65,19 @@ class PhotosVC: UIViewController {
             self.displayAlert(title: messages?.0 ?? "Opps!", message: messages?.1 ?? "Please Try Again...")
         }
         
-        // Bing DataSource
+        // Bing Data Listener
         photosViewModel.photosData.bind { _ in
             self.reloadTableDataSource()
+            self.reloadCollectionDataSource()
         }
      
-        // Bing table Delegate
+        
+    }
+    
+    // MARK: - Delegats Methods
+    
+    func bindDelegates() {
+        // Bind table Delegate
         photosTableTableDelegate.didSelectedRow = { [self] photosDetails, indexPath  in
             
             if isSelectionOn {
@@ -86,6 +96,7 @@ class PhotosVC: UIViewController {
             }
         }
         
+        // Bind collection Delegate
         photosCollectionDelegate.didSelectItem = { [self] photosDetails, indexPath  in
             
             if isSelectionOn {
@@ -105,6 +116,7 @@ class PhotosVC: UIViewController {
         }
     }
 
+    // MARK: - DataSource Methods
     
     func reloadTableDataSource() {
         
@@ -134,10 +146,6 @@ class PhotosVC: UIViewController {
         }
     }
     
-    func isNeedToGiveDeleteOption() {
-        btnRemove.isHidden = !(selectedPhotosIds.count > 0)
-    }
-    
     // MARK: - Button Event
     @IBAction func btnGridListTapped(_ sender: UIButton) {
         isGridOn = !isGridOn
@@ -157,18 +165,45 @@ class PhotosVC: UIViewController {
     }
     
     @IBAction func btnRemoveTapped(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Are You sure!", message: "You want to delete.", preferredStyle: .alert)
+
+        alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { [self] action in
+            photosViewModel.removePhotosDetails(ids: selectedPhotosIds)
+            selectedPhotosIds.removeAll()
+            isNeedToGiveDeleteOption()
+            btnSelectUnSelectTapped(UIButton())
+        }))
         
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in }))
+
+        present(alertController, animated: true, completion: nil)
+             
     }
     
     @IBAction func btnSelectUnSelectTapped(_ sender: UIButton) {
         isSelectionOn = !isSelectionOn
         let btnTitle = isSelectionOn ? "UnSelect" : "Select"
         btnSelectUnSelect.setTitle(btnTitle, for: .normal)
+        if !isSelectionOn {
+            var indexPaths: [IndexPath] = []
+            for id in selectedPhotosIds {
+                if let firstIndex = photosViewModel.photosData.value?.firstIndex(where: { $0.id == id }) {
+                    if isGridOn {
+                        indexPaths.append( IndexPath(row: firstIndex, section: 0))
+                    } else {
+                        indexPaths.append(IndexPath(item: firstIndex, section: 0))
+                    }
+                }
+            }
+            selectedPhotosIds.removeAll()
+            if isGridOn {
+                photosCollection.reloadItems(at: indexPaths)
+            } else {
+                photosTable.reloadRows(at: indexPaths, with: .automatic)
+            }
+            isNeedToGiveDeleteOption()
+        }
     }
     
 }
 
-// MARK: - Button Event
-extension PhotosVC {
-    
-}

@@ -7,97 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B7CA7180-9B29-4D7E-B476-E59D61972BA1"
+            uuid = "C3A47253-7406-4489-8DAC-87FC5F0A8BCB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Gallery App/View/PhotosVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "addDataListener()"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "btnSelectUnSelectTapped(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B7CA7180-9B29-4D7E-B476-E59D61972BA1 - e95a11d3558909c6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Optional&lt;Gallery_App.PhotosDetails&gt;, Foundation.IndexPath) -&gt; () in Gallery_App.PhotosVC.addDataListener() -&gt; ()"
-                  moduleName = "Gallery App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Gallery-App_Demo/Gallery%20App/View/PhotosVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "2252">
-               </Location>
-               <Location
-                  uuid = "B7CA7180-9B29-4D7E-B476-E59D61972BA1 - 2518b0e830ecbf36"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #4 (Swift.Optional&lt;Gallery_App.PhotosDetails&gt;, Foundation.IndexPath) -&gt; () in Gallery_App.PhotosVC.addDataListener() -&gt; ()"
-                  moduleName = "Gallery App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Gallery-App_Demo/Gallery%20App/View/PhotosVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "196">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CB6E4AE1-1386-4551-8F61-D16E0D165651"
+            uuid = "24B399A7-F7E7-470F-83AE-505DE5B07E34"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Gallery App/View/PhotosVC.swift"
+            filePath = "Gallery App/Services/ImageDownloader.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "addDataListener()"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "loadImageFromCache(filename:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CB6E4AE1-1386-4551-8F61-D16E0D165651 - 42921df65250cab8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Gallery_App.PhotosVC.addDataListener() -&gt; ()"
-                  moduleName = "Gallery App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Gallery-App_Demo/Gallery%20App/View/PhotosVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "376">
-               </Location>
-               <Location
-                  uuid = "CB6E4AE1-1386-4551-8F61-D16E0D165651 - e95a11d355890b97"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Optional&lt;Gallery_App.PhotosDetails&gt;, Foundation.IndexPath) -&gt; () in Gallery_App.PhotosVC.addDataListener() -&gt; ()"
-                  moduleName = "Gallery App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jevinkamani/Documents/MyProject/My%20Gallery%20App/Gallery-App_Demo/Gallery%20App/View/PhotosVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "196">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -8,5 +8,6 @@ target 'Gallery App' do
   # Pods for Gallery App
 
  pod 'KeychainSwift'
+ pod 'IQKeyboardManagerSwift'
 
 end

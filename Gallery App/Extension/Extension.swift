@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 
+// MARK: - UIViewController
+
 extension UIViewController {
     
     func displayAlert(title alertTitle: String, message alertMessage: String) {
@@ -27,6 +29,8 @@ extension UIViewController {
         return viewController
     }
 }
+
+// MARK: - UIImage
 
 extension UIImage {
 
@@ -54,23 +58,22 @@ extension UIImage {
     }
 }
 
+// MARK: - UITextField
+
 class RoundRectTextField: UITextField {
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        // Set background color to clear
         self.backgroundColor = .clear
 
-        // Set placeholder text color to white
         self.attributedPlaceholder = NSAttributedString(
             string: self.placeholder ?? "",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]
         )
 
-        // Set border color
-        self.layer.borderColor = UIColor.black.cgColor // Replace 'yourDesiredColor' with your chosen color
-        self.layer.borderWidth = 1 // Adjust border width as needed
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 1
         self.tintColor = .black
     }
 }

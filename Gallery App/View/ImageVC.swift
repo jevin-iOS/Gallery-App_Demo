@@ -26,7 +26,7 @@ class ImageVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: self.view.frame.width - 40.0, height: self.view.frame.height - 40.0))
+        imageView = UIImageView(frame: CGRect(x: 10, y: 70, width: self.view.frame.width * 0.9, height: self.view.frame.height * 0.8))
         imageView?.contentMode = .scaleAspectFit
         self.view.addSubview(imageView!)
         self.downloadData(url: photosDetails.urls.regular, name: photosDetails.id)
@@ -37,7 +37,9 @@ class ImageVC: UIViewController {
         DispatchQueue.global(qos: .background).async {
             ImageDownloader.downloadImage(from: url) { image in
                 DispatchQueue.main.async { [self] in
-                    imageView?.image = image
+                    if let resizedImg = image?.resized(withTargetSize: CGSizeMake(self.view.frame.width * 0.9, self.view.frame.height * 0.8)) {
+                        imageView?.image = resizedImg
+                    }
                 }
             }
         }

@@ -15,6 +15,7 @@ class GridViewCell: UICollectionViewCell {
     @IBOutlet weak var ImgSelectedImage: UIImageView!
     @IBOutlet weak var lblLikes: UILabel!
     @IBOutlet weak var lblDates: UILabel!
+    @IBOutlet weak var viewMain: UIView!
     
     var photosDetails: PhotosDetails? {
         didSet {
@@ -51,7 +52,10 @@ class GridViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        viewMain.layer.shadowColor = UIColor.lightGray.cgColor
+        viewMain.layer.shadowOffset = CGSize(width: 0, height: 2)
+        viewMain.layer.shadowOpacity = 0.5
+        viewMain.layer.shadowRadius = 3
     }
 
 }

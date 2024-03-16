@@ -18,14 +18,16 @@ class PhotosCollectionDelegate<T>: NSObject, UICollectionViewDelegate, UICollect
         didSelectItem(item?.photosDetails as? T, indexPath)
     }
     
+    // MARK: - Manage Cell Size
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let gridCount = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2
-        let spacing: CGFloat = 0 // Spacing on each side
-        var totalSpacing = (CGFloat(gridCount) * spacing) + 20.0 // Total horizontal spacing
+        let spacing: CGFloat = 0
+        var totalSpacing = (CGFloat(gridCount) * spacing) + 20.0
 
             let availableWidth = collectionView.frame.width - totalSpacing
-            let widthPerItem = availableWidth / CGFloat(gridCount) // Divide by 2 because we want 2 items per row
+            let widthPerItem = availableWidth / CGFloat(gridCount)
 
         return CGSize(width: widthPerItem, height: widthPerItem * 1.25)
         

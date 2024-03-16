@@ -13,6 +13,8 @@ class PreviewVC: UIViewController {
     var photosDetailsArray: [PhotosDetails] = []
     var currentIndex: Int = 0
 
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,8 @@ class PreviewVC: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
     }
+    
+    // MARK: - Setup Page Controller
     
     private func setupPageController() {
         

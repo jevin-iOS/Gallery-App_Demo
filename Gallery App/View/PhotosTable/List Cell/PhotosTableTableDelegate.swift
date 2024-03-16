@@ -21,6 +21,5 @@ class PhotosTableTableDelegate<T>: NSObject, UITableViewDelegate {
         if let tableCell = tableView.cellForRow(at: indexPath) as? ListViewCell {
             didSelectedRow(tableCell.photosDetails as? T, indexPath)
         }
-       
     }
 }

@@ -28,21 +28,22 @@ class PhotosTableDataSource<Cell: UITableViewCell, T>: NSObject, UITableViewData
         return items?.count ?? 0
     }
     
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let tableCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier ?? "") as? Cell, let item = items?[indexPath.row] {
             configureCell?(tableCell, item)
-            tableCell.layer.cornerRadius = 10
-            tableCell.layer.masksToBounds = true
-            tableCell.layer.shadowColor = UIColor.black.cgColor
-            tableCell.layer.shadowOffset = CGSize(width: 0, height: 2)
-            tableCell.layer.shadowRadius = 3
-            tableCell.layer.shadowOpacity = 0.3
+            
+            self.setUpSelectionView(tableCell: tableCell)
+            
             return tableCell
         }
       
         return UITableViewCell()
+    }
+    
+    private func setUpSelectionView(tableCell: UITableViewCell) {
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = .white
+        tableCell.selectedBackgroundView = backgroundView
     }
 }
