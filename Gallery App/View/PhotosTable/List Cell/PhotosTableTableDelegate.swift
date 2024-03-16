@@ -22,4 +22,12 @@ class PhotosTableTableDelegate<T>: NSObject, UITableViewDelegate {
             didSelectedRow(tableCell.photosDetails as? T, indexPath)
         }
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.transform = CGAffineTransform(translationX: tableView.bounds.width, y: 0)
+        
+        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: [.curveEaseInOut], animations: {
+            cell.transform = CGAffineTransform(translationX: 0, y: 0)
+        }, completion: nil)
+    }
 }
