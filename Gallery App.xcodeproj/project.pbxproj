@@ -33,6 +33,7 @@
 		FC9FB3082BA59C0100505491 /* GridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9FB3062BA59C0100505491 /* GridViewCell.xib */; };
 		FC9FB30C2BA5B52100505491 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9FB30B2BA5B52000505491 /* PreviewVC.swift */; };
 		FC9FB30E2BA5C03900505491 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9FB30D2BA5C03900505491 /* ImageVC.swift */; };
+		FC9FB3102BA5D65200505491 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9FB30F2BA5D65200505491 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		FC9FB3062BA59C0100505491 /* GridViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridViewCell.xib; sourceTree = "<group>"; };
 		FC9FB30B2BA5B52000505491 /* PreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
 		FC9FB30D2BA5C03900505491 /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
+		FC9FB30F2BA5D65200505491 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				FC9FB2C92BA5604F00505491 /* PhotosVC.swift */,
 				FC9FB30B2BA5B52000505491 /* PreviewVC.swift */,
 				FC9FB30D2BA5C03900505491 /* ImageVC.swift */,
+				FC9FB30F2BA5D65200505491 /* LoginVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9FB3102BA5D65200505491 /* LoginVC.swift in Sources */,
 				FC9FB3022BA59B6000505491 /* PhotosCollectionDataSource.swift in Sources */,
 				FC9FB2FD2BA5880400505491 /* PhotosTableTableDelegate.swift in Sources */,
 				FC9FB30E2BA5C03900505491 /* ImageVC.swift in Sources */,
