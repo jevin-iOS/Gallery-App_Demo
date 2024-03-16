@@ -19,3 +19,12 @@ enum StaticErrorMessages: String {
         return self.rawValue
     }
 }
+
+enum KeychainKeys: String {
+    case username = "userName"
+    case password = "Password"
+    
+    var stringValue: String {
+        return self.rawValue
+    }
+}

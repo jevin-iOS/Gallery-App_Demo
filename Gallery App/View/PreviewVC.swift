@@ -16,9 +16,14 @@ class PreviewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.isHidden = false
         self.view.backgroundColor = .lightGray
         
         self.setupPageController()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     private func setupPageController() {

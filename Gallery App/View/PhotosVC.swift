@@ -16,6 +16,7 @@ class PhotosVC: UIViewController {
     @IBOutlet weak var photosCollection: UICollectionView!
     
     var isSelectionOn: Bool = false
+    var isGridOn: Bool = false
     var selectedPhotosIds: [String] = []
     
     lazy var photosViewModel: PhotosViewModel = {
@@ -30,6 +31,8 @@ class PhotosVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.isHidden = true
         
         photosTable.register(UINib(nibName: "ListViewCell", bundle: nil), forCellReuseIdentifier: "ListViewCell")
         photosTable.delegate = photosTableTableDelegate
@@ -62,7 +65,6 @@ class PhotosVC: UIViewController {
         // Bing DataSource
         photosViewModel.photosData.bind { _ in
             self.reloadTableDataSource()
-            self.reloadCollectionDataSource()
         }
      
         // Bing table Delegate
@@ -75,14 +77,13 @@ class PhotosVC: UIViewController {
                     selectedPhotosIds.removeAll { $0 == photosDetails?.id ?? "" }
                 }
                 photosTable.reloadRows(at: [indexPath], with: .automatic)
+                isNeedToGiveDeleteOption()
             } else {
-                
+                guard let previewVC = self.getViewController(type: PreviewVC.self) else { return }
+                previewVC.currentIndex = indexPath.row
+                previewVC.photosDetailsArray = photosViewModel.photosData.value ?? []
+                self.navigationController?.pushViewController(previewVC, animated: true)
             }
-            print("")
-//            guard let employeeDetailsVC = self.getViewController(type: EmployeeDetailsVC.self) else { return }
-//            employeeDetailsVC.employeeData = employeeData
-//            self.navigationController?.pushViewController(employeeDetailsVC, animated: true)
-            
         }
         
         photosCollectionDelegate.didSelectItem = { [self] photosDetails, indexPath  in
@@ -94,19 +95,16 @@ class PhotosVC: UIViewController {
                     selectedPhotosIds.removeAll { $0 == photosDetails?.id ?? "" }
                 }
                 photosCollection.reloadItems(at: [indexPath])
+                isNeedToGiveDeleteOption()
             } else {
                 guard let previewVC = self.getViewController(type: PreviewVC.self) else { return }
                 previewVC.currentIndex = indexPath.row
                 previewVC.photosDetailsArray = photosViewModel.photosData.value ?? []
                 self.navigationController?.pushViewController(previewVC, animated: true)
             }
-            print("")
-//            guard let employeeDetailsVC = self.getViewController(type: EmployeeDetailsVC.self) else { return }
-//            employeeDetailsVC.employeeData = employeeData
-//            self.navigationController?.pushViewController(employeeDetailsVC, animated: true)
-            
         }
     }
+
     
     func reloadTableDataSource() {
         
@@ -136,9 +134,26 @@ class PhotosVC: UIViewController {
         }
     }
     
+    func isNeedToGiveDeleteOption() {
+        btnRemove.isHidden = !(selectedPhotosIds.count > 0)
+    }
+    
     // MARK: - Button Event
     @IBAction func btnGridListTapped(_ sender: UIButton) {
-        
+        isGridOn = !isGridOn
+        let imgname = isGridOn ? "listImg" : "GridImg"
+        let image = UIImage(named: imgname) ?? UIImage()
+        btnGridList.setImage(image, for: .normal)
+        if isGridOn {
+            photosTable.isHidden = true
+            photosCollection.isHidden = false
+            reloadCollectionDataSource()
+        } else {
+            photosTable.isHidden = false
+            photosCollection.isHidden = true
+            reloadTableDataSource()
+        }
+       
     }
     
     @IBAction func btnRemoveTapped(_ sender: UIButton) {

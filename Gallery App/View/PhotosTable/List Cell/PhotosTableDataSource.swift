@@ -34,6 +34,12 @@ class PhotosTableDataSource<Cell: UITableViewCell, T>: NSObject, UITableViewData
         
         if let tableCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier ?? "") as? Cell, let item = items?[indexPath.row] {
             configureCell?(tableCell, item)
+            tableCell.layer.cornerRadius = 10
+            tableCell.layer.masksToBounds = true
+            tableCell.layer.shadowColor = UIColor.black.cgColor
+            tableCell.layer.shadowOffset = CGSize(width: 0, height: 2)
+            tableCell.layer.shadowRadius = 3
+            tableCell.layer.shadowOpacity = 0.3
             return tableCell
         }
       

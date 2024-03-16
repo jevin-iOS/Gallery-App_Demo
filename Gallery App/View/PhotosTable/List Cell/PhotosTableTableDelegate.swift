@@ -13,7 +13,7 @@ class PhotosTableTableDelegate<T>: NSObject, UITableViewDelegate {
     var didSelectedRow: ((T?, IndexPath)->()) = {_,_  in}
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.height - 90
+        return tableView.frame.height * 0.70
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
