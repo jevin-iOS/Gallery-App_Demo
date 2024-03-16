@@ -46,7 +46,7 @@ class PhotosCollectionDelegate<T>: NSObject, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         cell.transform = CGAffineTransform(translationX: collectionView.bounds.width, y: 0)
         
-        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: [.curveEaseInOut], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row) * 0.1, options: [.curveEaseInOut], animations: {
             cell.transform = CGAffineTransform(translationX: 0, y: 0)
         }, completion: nil)
     }

@@ -11,6 +11,7 @@ import UIKit
 class PhotosTableTableDelegate<T>: NSObject, UITableViewDelegate {
     
     var didSelectedRow: ((T?, IndexPath)->()) = {_,_  in}
+    var animatedCell: [IndexPath] = []
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.frame.height * 0.70
@@ -24,10 +25,13 @@ class PhotosTableTableDelegate<T>: NSObject, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.transform = CGAffineTransform(translationX: tableView.bounds.width, y: 0)
-        
-        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: [.curveEaseInOut], animations: {
-            cell.transform = CGAffineTransform(translationX: 0, y: 0)
-        }, completion: nil)
+        if !animatedCell.contains(indexPath) {
+            cell.transform = CGAffineTransform(translationX: tableView.bounds.width, y: 0)
+            
+            UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row) * 0.1, options: [.curveEaseInOut], animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0)
+            }, completion: nil)
+            animatedCell.append(indexPath)
+        }
     }
 }

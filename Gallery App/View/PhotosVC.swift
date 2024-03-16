@@ -159,6 +159,7 @@ class PhotosVC: UIViewController {
         let imgname = isGridOn ? "listImg" : "GridImg"
         let image = UIImage(named: imgname) ?? UIImage()
         btnGridList.setImage(image, for: .normal)
+        photosTableTableDelegate.animatedCell.removeAll()
         if isGridOn {
             photosTable.isHidden = true
             photosCollection.isHidden = false
@@ -175,6 +176,7 @@ class PhotosVC: UIViewController {
         let alertController = UIAlertController(title: "Are You sure!", message: "You want to delete.", preferredStyle: .alert)
 
         alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { [self] action in
+            photosTableTableDelegate.animatedCell.removeAll()
             photosViewModel.removePhotosDetails(ids: selectedPhotosIds)
             selectedPhotosIds.removeAll()
             isNeedToGiveDeleteOption()
